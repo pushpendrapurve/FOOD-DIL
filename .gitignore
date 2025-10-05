@@ -1,0 +1,13 @@
+*node_modules
+
+*.env
+
+# Ignore node_modules
+**/node_modules
+# Ignore environment files
+**/.env
+# Ignore uploads and assets
+Backend/uploads/
+Frontend/src/assets/
+Admin/src/assets/
+
