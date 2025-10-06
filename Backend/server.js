@@ -32,7 +32,7 @@ app.get('/',(req,res)=>{
     res.send("api!")
 })
 
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV === "production") {
   app.listen(port, () => {
     console.log("=> http://localhost:" + port);
   });
