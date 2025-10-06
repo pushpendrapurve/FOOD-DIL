@@ -29,7 +29,7 @@ const Add = ({Url,token}) => {
     formData.append("description", data.description);
     formData.append("price", Number(data.price));
     formData.append("category", data.category);
-    formData.append("image", image);
+    formData.append("image", image); 
     const response = await axios.post(`${Url}/api/food/add`, formData,{headers:{token}});
     if (response.data.success) {
       setData({
