@@ -5,7 +5,7 @@ import foodRouter from './routes/foodRouter.js';
 import userRouter from './routes/userRouter.js';
 import cartRouter from './routes/cartRouter.js';
 import orderRouter from './routes/orderRouter.js';
-import 'dotenv/config';
+import 'dotenv/config';  
 
 const app = express();
 let port = process.env.PORT || 3000;
