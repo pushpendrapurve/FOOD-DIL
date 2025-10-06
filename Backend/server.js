@@ -7,12 +7,15 @@ import 'dotenv/config'
 import cartRouter from './routes/cartRouter.js';
 import orderRouter from './routes/orderRouter.js';
 const app = express()
-let port = 3000;
+let port =  process.env.PORT || 3000;
 
 export let pass = "12345"
 
 app.use(express.json())
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
+
 
 //connect to db
 connectDB();
@@ -32,3 +35,5 @@ app.get('/',(req,res)=>{
 app.listen(port,(req,res)=>{
     console.log("=> http://localhost:"+port)
 })
+
+export default app;
