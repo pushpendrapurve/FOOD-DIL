@@ -9,14 +9,14 @@ const Verify = () => {
     const success = searchParams.get("success");
     const orderId = searchParams.get("orderId");
     const {url} = useContext(StoreContext)
-    const naviagate = useNavigate();
+    const navigate = useNavigate();
 
     const verifyPayment = async (req,res)=>{
      const response = await axios.post(url+"/api/order/verify",{success,orderId})
      if(response.data.success){
-        naviagate("/myorders");
+        navigate("/myorders");
      }else{
-        naviagate("/");
+        navigate("/");
      }
     }
 
